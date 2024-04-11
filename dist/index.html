@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Multi Step Login Page</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style2.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+
+<body>
+    <div class="min-h-screen ">
+
+        <!-- Step 1: Sign up form -->
+        <div id="step1" class="container step">
+            <div class="flex flex-col lg:flex-row lg:justify-between">
+
+        <!-- left side image part starts here -->
+
+                <div class=" md:w-[30rem] w- pl-9 pt-6 mr-24  bg-[#f2d184] hidden lg:block">
+
+                    <h1 class=" logo-name text-[#866216] text-3xl font-bold mb-4"><a
+                            href="https://dribbble.com/">dribbble</a></h1>
+                    <div>
+                        <p class="text-3xl font-semibold mb-10 text-[#866216]">Discover the world's top<br>Designers &
+                            Creatives.</p>
+                    </div>
+
+                    <div class="mx-auto">
+                        <img src="/img/img.png" alt="image">
+                    </div>
+                    <p class="text-[#866216] font-sans mt-20">Art by <u>Peter Tarka</u></p>
+                </div>
+
+        <!-- left side image part ends here -->
+
+
+        <!-- our form starts here -->
+
+                <div class="w-full h-auto lg:w-1/2 py-16 ">
+                    <!-- <p class="font-sans text-right mb-8">Already a member?<a class="text-blue-600" href="">Sign in</a></p> -->
+                    <h2 class="text-2xl mb-4  font-bold  ml-9 md:ml-0">Sign up to Dribbble</h2>
+
+                    <form class="mt-12 lg:w-[28rem] " action="#">
+                        <div class="grid md:grid-cols-2 grid-cols-1  gap-3">
+                            <div class=" mb-4 ml-5 md:ml-0">
+                                <label for="name" class="font-bold">Name</label><br>
+                                <input type="text" placeholder="Enter your name" id="name" required
+                                    class="border bg-gray-100 focus:bg-yellow-200 rounded-lg px-1 py-1 h-12 w-[20rem] lg:w-auto">
+                            </div>
+                            <div class=" mb-4 ml-5 md:ml-0">
+                                <label for="Username" class="font-bold">Username</label><br>
+                                <input type="text" placeholder="Enter your username" id="username" required
+                                    class="border bg-gray-100 focus:bg-yellow-200 rounded-lg px-1 py-1 h-12 w-[20rem] lg:w-auto">
+                            </div>
+
+                            <div class="mb-4 ml-5 md:ml-0">
+                                <label for="email" class="font-bold">Email</label><br>
+                                <input type="email" placeholder="Enter your email" required id="email"
+                                    class="border bg-gray-100 focus:bg-yellow-200 rounded-lg px-2 py-1 h-12 w-[20rem] lg:w-[23.3rem]">
+                            </div>
+                            <br>
+
+                            <div class="mb-4 ml-5 md:ml-0">
+                                <label for="password" class="font-bold">Password</label><br>
+                                <input type="password" placeholder="6+ characters" id="password" required
+                                    class="border bg-gray-100 focus:bg-yellow-200 rounded-lg px-2 py-1 w-[20rem] lg:w-[23.3rem] h-12">
+                            </div>
+                            <br>
+                            <div class="mb-4 ml-5 md:ml-0">
+                                <input class="size-5" type="checkbox" required class="border bg-gray-100 rounded-s-lg">
+                                <span class="block w-[20rem] lg:w-[23.3rem]">
+                                    Creating an account means you're okay with our <a href="https://dribbble.com/terms"
+                                        class="text-purple-400 font-medium text-base">Terms of Service,Privacy
+                                        Policy</a> and our default<a href="https://dribbble.com/notifications"
+                                        class="text-purple-400 font-medium text-base "> Notification Settings</a>
+                                </span>
+                            </div>
+                            <br>
+                            <div class="mt-7 flex justify-center items-center">
+                                <button type="submit" id="nextStep1"
+                                    class="py-2 text-center flex justify-center items-center text-white bg-[#ea4b8b] w-full rounded-xl font-semibold">Create
+                                    Account</button>
+
+                            </div>
+                            <br>
+                            <div class="mb-4 ml-5 md:ml-0 ">
+                                <p class="block w-[20rem] lg:w-[23.3rem] text-sm">
+                                    This site is protected by reCAPTCHA and the Google
+                                    <a href="https://policies.google.com/privacy"
+                                        class="text-purple-400 font-normal text-base">Privacy Policy</a> and
+                                    <a href="https://policies.google.com/terms"
+                                        class="text-purple-400 font-normal text-base">Terms of Service</a>
+                                </p>
+                            </div>
+
+                        </div>
+                        <p id="errorMessage" class="text-red-500 text-xl italic mt-2 hidden">Please fill all the fields!
+                        </p>
+
+                    </form>
+                    <!-- Our form ends here -->
+                </div>
+            </div>
+        </div>
+        <!-- End of Step 1 -->
+        
+
+        <!-- Step 2: Image upload page -->
+
+        <div id="step2" class="step h-auto hidden">
+
+            <div class=" md:w-full mx-auto  p-5 ">
+                <nav>
+                    <h1 class=" logo-name text-[#ea4b8b] text-3xl font-extrabold mb-4"><a
+                            href="https://dribbble.com/">dribbble</a></h1>
+
+                </nav>
+            </div>
+
+            <div class="flex flex-col justify-center items-center">
+                <h1 class=" mb-3 heading text-black text-2xl md:text-3xl font-bold">Welcome! Let's create your profile
+                </h1>
+                <p class="md:text-[1rem] text-sm text-gray-600 font-normal">Let others get to know you better! You can
+                    do these later</p>
+
+                <div class="mt-8 ">
+                    <h3 class="text-lg font-bold mb-6 mr-[15rem] lg:mr-[21rem]">Add an avatar</h3>
+                </div>
+
+                <div class="">
+                    <input type="file" id="avatarInput" accept="image/*" class="hidden w-10 h-10">
+                </div>
+
+                <div class="flex justify-center items-center">
+                    <label for="avatarInput" class=" cursor-pointer block">
+                        <img id="avatarPreview" src="/img/profile.png" alt="Avatar"
+                            class=" md:w-[12rem] md:h-[13rem] w-[10rem] h-[11rem] rounded-full object-cover  lg:px-2 lg:py-2 px-1 py-1 lg:mr-[10rem] mr-[12rem] ">
+
+                    </label>
+                </div>
+
+                <div class="lg:flex lg:justify-end lg:items-end">
+                    <button type="button" id="chooseImageButton"
+                        class="ml-[8rem] mt-5   px-2 py-1 bg-gray-200 text-black rounded-md hover:bg-gray-300 focus:outline-none  font-medium absolute top-[20rem] right-10 lg:right-[26rem]">Choose
+                        Image</button>
+                </div>
+
+                <div class="mt-10">
+                    <label for="location" class="text-lg font-bold mr-[13rem] lg:mr-[10rem]">Add your
+                        location</label><br>
+                    <input type="text" placeholder="Enter location" id="location" required name="location"
+                        class=" shadow-lg border border-gray-200 focus:bg-yellow-200 md:w-[30rem] rounded-md h-10 ml-3 mt-4 w-[19rem]">
+                </div>
+
+                <div class=" mt-[3rem] grid md:grid-cols-2 grid-cols-1 md:gap-48 md:max-w-[30rem] gap-4">
+                    <button type="button" id="prevStep2"
+                        class="px-4 py-2 text-sm font-semibold text-gray-700 bg-gray-200 rounded-md hover:bg-gray-300 focus:outline-none focus:bg-gray-300">Previous</button>
+                    <button type="submit" id="nextStep2"
+                        class="px-4 py-2 text-sm font-semibold text-white bg-[#ea4b8b] rounded-md hover:bg-red-800 focus:outline-none">Next</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- End of Step 2 -->
+
+        <!-- Step 3: Reason for joining Dribbble -->
+
+        <div id="step3" class="step h-auto hidden">
+            <div class=" md:w-full mx-auto  p-5 ">
+                <nav>
+                    <h1 class=" logo-name text-[#ea4b8b] text-3xl font-extrabold mb-4"><a
+                            href="https://dribbble.com/">dribbble</a></h1>
+
+                </nav>
+            </div>
+
+            <div class="flex flex-col justify-center items-center">
+
+                <div class="mb-3">
+                    <h1 class="heading text-black text-2xl md:text-3xl font-bold">What brings you to Dribbble?</h1>
+                </div>
+                <br>
+                <div>
+                    <p class=" md:ml-0 ml-4 md:text-[1rem] text-sm text-gray-600 font-normal mb-12">Select the options
+                        that best describe you. Don't, worry you can explore other options later</p>
+                </div>
+            </div>
+
+            <div class="w-full flex flex-wrap justify-evenly gap-3">
+                <div class=" cart w-64 h-80 flex flex-col items-center bg-[#fff] shadow-lg border border-gray-200 rounded-lg "
+                    onclick="this.classList.toggle('border-pink-600')">
+                    <img class="w-56 h-52 pb-8" src="/img/image 1.png" alt="Image">
+                    <p class="text-md font-bold ">I'm a designer looking to</p>
+                    <p class="text-md font-bold mb-3">share my work</p>
+                    <input type="checkbox" name="checkbox" class="mb-4 size-5 accent-[#ea4b8b] checkbox">
+                </div>
+
+                <div class=" cart w-64 h-80 flex flex-col items-center bg-[#fff] shadow-lg border border-gray-200 rounded-lg"
+                    onclick="this.classList.toggle('border-pink-600')">
+                    <img class="w-56 h-52 pb-8" src="/img/image 2.png" alt="Image">
+                    <p class="text-md font-bold ">I'm looking to hire a</p>
+                    <p class="text-md font-bold mb-3">designer</p>
+                    <input type="checkbox" name="checkbox" class="mb-4 size-5 accent-[#ea4b8b] checkbox">
+                </div>
+
+                <div class=" cart w-64 h-80 flex flex-col items-center bg-[#fff] shadow-lg border border-gray-200 rounded-lg"
+                    onclick="this.classList.toggle('border-pink-600')">
+                    <img class="w-56 h-52 pb-8" src="/img/image3.png" alt="Image">
+                    <p class="text-md font-bold ">I'm looking for design</p>
+                    <p class="text-md font-bold mb-3">inspiration</p>
+                    <input type="checkbox" name="checkbox" class="mb-4 size-5 accent-[#ea4b8b] checkbox">
+                </div>
+
+            </div>
+
+            <div class="mt-10 mb-4 flex  justify-evenly md:justify-center md:items-center md:gap-20">
+                <div>
+                    <button type="button" id="prevStep3"
+                        class="px-4 py-2 text-sm font-semibold text-gray-700 bg-gray-200 rounded-md hover:bg-gray-300 focus:outline-none focus:bg-gray-300">Previous</button>
+                </div>
+
+                <div>
+                    <button type="submit" id="nextStep3"
+                        class=" w-40 px-4 py-2 text-sm font-semibold text-white bg-[#ea4b8b] rounded-md hover:bg-red-800 focus:outline-none">Next</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- End of Step 3 -->
+
+        <!-- Step 4: Email verification -->
+
+        <div id="step4" class="step h-auto hidden">
+
+        <!-- nav bar starts here -->
+
+            <nav class="w-full h-auto shadow-lg flex justify-between items-center">
+                <div>
+                    <h1 class=" logo-name text-black text-3xl font-extrabold mb-4 px-5"><a
+                            href="https://dribbble.com/">dribbble</a></h1>
+
+                </div>
+            <!-- Toggle Button for Mobile -->
+                <div class="bx bx-menu" id="toggleButton"><span class="animate" style="--i:2;"></span></div>
+
+                <ul class=" Navbar md:flex font-semibold text-[#706f75] hidden">
+                    <li class="mx-[10px]"><a href="https://dribbble.com/shots/popular">Inspiration</a></li>
+                    <li class="mx-[10px]"><a href="https://dribbble.com/jobs">Find Work</a></li>
+                    <li class="mx-[10px]"><a href="https://dribbble.com/ux-diploma">Learn Design</a></li>
+                    <li class="mx-[10px]"><a href="https://dribbble.com/pro">Go Pro</a></li>
+                    <li class="mx-[10px]"><a href="https://dribbble.com/designers">Hire Designers</a></li>
+                </ul>
+
+                <div class="flex">
+                    <input class="w-28 mx-[10px] bg-gray-200 rounded-xl font-semibold hidden md:block" type="search"
+                        placeholder=" Search....">
+                    <img class="w-10 h-10 mx-[10px] rounded-full hidden md:block" src="/img/img-profile" alt="profile">
+                    <div>
+                        <button
+                            class="mx-[10px] bg-[#ea4b8b] py-2 px-2 rounded-xl text-white font-semibold hidden md:block"
+                            type="button">Upload</button>
+                    </div>
+                </div>
+            </nav>
+
+        <!-- navbar ends here -->
+
+            <main class="h-auto mt-16">
+                <div class="flex flex-col justify-center items-center">
+                    <div class="mb-3 mx-2">
+                        <h1 class="text-3xl font-bold">Please verify your email...</h1>
+                    </div>
+                    <div>
+                        <img class="w-24 h-20 md:w-32 md:h-28" src="/img/mail icon.png" alt="mail-icon">
+                    </div>
+                    <div class="mt-4 mx-2">
+                        <p class="text-[#6b6974]">Please verify your email address.We've sent a confirmation email to:
+                        </p>
+                    </div>
+                    <div class="mt-6">
+                        <p class="font-semibold">name123@gmail.com</p>
+                    </div>
+                    <div class="mt-6 mx-2">
+                        <p class="text-[#6b6974]">Click the confirmation link on that email to beigin using Dribbble.
+                        </p>
+                    </div>
+                    <div class="mt-6 mx-2">
+                        <p class="text-[#6b6974]">Didn't recieve the email?Check your spam folder, it may have been
+                            caught by a filter, if</p>
+                    </div>
+
+                    <div class="mx-2">
+                        <p class="text-[#6b6974]">you still don't see it,you can <a class="text-[#ea4b8b] font-medium"
+                                href="#">resend the confirmation email.</a>
+                        </p>
+                    </div>
+
+                    <div class="mt-6 mx-2">
+                        <p class="text-[#6b6974] ">Wrong email address?<a class="text-[#ea4b8b] font-medium"
+                                href="#">Change it.</a>
+                        </p>
+                    </div>
+                </div>
+            </main>
+
+    <!-- footer starts here -->
+
+            <footer
+                class="w-full h-auto bg-[#fafafa] px-4 pt-8 flex flex-col md:flex-row flex-wrap justify-between md:px-12 shadow-lg mt-16 border border-red-200">
+
+                <div>
+                    <h1 class=" logo-name text-[#ea4b8b] text-3xl font-extrabold mb-4"><a
+                            href="https://dribbble.com/">dribbble</a></h1>
+                    <p class="text-[#4e4d5c]">Dribbble is the world's leading <br>community for creatives to share,<br>
+                        grow and get hired</p>
+
+                    <ul class=" flex flex-row mt-4">
+                        <li class="mr-3 text-2xl"><a href=""><i class='bx bxl-dribbble'></i></a></li>
+                        <li class="mr-3 text-2xl"><a href=""><i class='bx bxl-twitter'></i></a></li>
+                        <li class="mr-3 text-2xl"><a href=""><i class='bx bxl-facebook-square'></i></a></li>
+                        <li class="mr-3 text-2xl"><a href=""><i class='bx bxl-instagram'></i></a></li>
+                        <li class="mr-3 text-2xl"><a href=""><i class='bx bxl-pinterest'></i></a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h2 class="font-bold text-base mt-4 mb-3">For designers</h2>
+                    <div class="cursor-pointer">
+                        <p class="text-[#4e4d5c] mb-3 text-sm font-medium">Go pro!</p>
+                        <p class="text-[#4e4d5c] mb-3 text-sm font-medium">Explore design work</p>
+                        <p class="text-[#4e4d5c] mb-3 text-sm font-medium">Design blog</p>
+                        <p class="text-[#4e4d5c] mb-3 text-sm font-medium">Overtime podcast</p>
+                        <p class="text-[#4e4d5c] mb-3 text-sm font-medium">Playoffs</p>
+                        <p class="text-[#4e4d5c] mb-3 text-sm font-medium">Weekly Warm-Up</p>
+                        <p class="text-[#4e4d5c] mb-3 text-sm font-medium">Refer a Friend</p>
+                        <p class="text-[#4e4d5c] mb-3 text-sm font-medium">Code of conduct</p>
+                    </div>
+                </div>
+
+                <div>
+                    <h2 class="font-bold text-base mt-4 mb-3">Hire designers</h2>
+                    <div class="cursor-pointer">
+                        <p class="text-[#4e4d5c] mb-3 text-sm font-medium">Post a job opening</p>
+                        <p class="text-[#4e4d5c] mb-3 text-sm font-medium">Post a freelance project</p>
+                        <p class="text-[#4e4d5c] mb-6 text-sm font-medium">Search for designers</p>
+                        <p class="text-black mb-3 text-sm font-semibold">Brands</p>
+                        <p class="text-[#4e4d5c] mb-3 text-sm font-medium">Advertise with us</p>
+
+                    </div>
+                </div>
+
+                <div>
+                    <h2 class="font-bold text-base mt-4 mb-3">Company</h2>
+                    <div class="cursor-pointer">
+                        <p class="text-[#4e4d5c] mb-3 text-sm font-medium">About</p>
+                        <p class="text-[#4e4d5c] mb-3 text-sm font-medium">Careers</p>
+                        <p class="text-[#4e4d5c] mb-3 text-sm font-medium">Support</p>
+                        <p class="text-[#4e4d5c] mb-3 text-sm font-medium">Media kit</p>
+                        <p class="text-[#4e4d5c] mb-3 text-sm font-medium">Testimonials</p>
+                        <p class="text-[#4e4d5c] mb-3 text-sm font-medium">API</p>
+                        <p class="text-[#4e4d5c] mb-3 text-sm font-medium">Terms of service</p>
+                        <p class="text-[#4e4d5c] mb-3 text-sm font-medium">Privacy policy</p>
+                        <p class="text-[#4e4d5c] mb-3 text-sm font-medium">Cookie policy</p>
+                    </div>
+                </div>
+
+                <div>
+                    <h2 class="font-bold text-base mt-4 mb-3">Directories</h2>
+                    <div class="cursor-pointer">
+                        <p class="text-[#4e4d5c] mb-3 text-sm font-medium">Design jobs</p>
+                        <p class="text-[#4e4d5c] mb-3 text-sm font-medium">Designers for hire</p>
+                        <p class="text-[#4e4d5c] mb-3 text-sm font-medium">Freelance designers <br> for hire</p>
+                        <p class="text-[#4e4d5c] mb-3 text-sm font-medium">Tags</p>
+                        <p class="text-[#4e4d5c] mb-6 text-sm font-medium">Places</p>
+                        <p class="text-black mb-3 text-sm font-semibold">Design assets</p>
+                        <p class="text-[#4e4d5c] mb-3 text-sm font-medium">Dribbble Marketplace</p>
+                        <p class="text-[#4e4d5c] mb-3 text-sm font-medium">Creative Market</p>
+                        <p class="text-[#4e4d5c] mb-3 text-sm font-medium">Fontspring</p>
+                        <p class="text-[#4e4d5c] mb-3 text-sm font-medium">Font Squirrel</p>
+                    </div>
+                </div>
+
+                <div>
+                    <h2 class="font-bold text-base mt-4 mb-3">Design Resources</h2>
+                    <div class="cursor-pointer">
+                        <p class="text-[#4e4d5c] mb-3 text-sm font-medium">Freelancing</p>
+                        <p class="text-[#4e4d5c] mb-3 text-sm font-medium">Design Hiring</p>
+                        <p class="text-[#4e4d5c] mb-3 text-sm font-medium">Design Portfolio</p>
+                        <p class="text-[#4e4d5c] mb-3 text-sm font-medium">Design Education</p>
+                        <p class="text-[#4e4d5c] mb-3 text-sm font-medium">Creative Process</p>
+                        <p class="text-[#4e4d5c] mb-3 text-sm font-medium">Design Industry <br> Trends</p>
+
+                    </div>
+                </div>
+
+
+
+            </footer>
+
+    <!-- footer ends here -->
+
+            <div class="h-[10vh] flex justify-between items-center px-5">
+                <div>
+                    <p class="text-[#4e4d5c] mb-3 text-sm font-medium">&copy; 2023 Dribbble. All rights reserved</p>
+                </div>
+                <div>
+                    <p class="text-[#4e4d5c] mb-3 text-sm font-medium"><b class="text-black">20,501,853</b> shots
+                        dribbbled <img src="/img/dribbble.png" alt="dribbble" class="w-10 h-10 inline-block"></p>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- step 4 ends here -->
+    
+    <script src="script.js"></script>
+</body>
+
+</html>
