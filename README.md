@@ -21,10 +21,10 @@
 
 #Technology Used In this project
 
-*Tailwind css
-*HTML
-*CSS
-*java Script
+* Tailwind css
+* HTML
+* CSS
+* java Script
 
 
 
